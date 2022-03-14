@@ -1,27 +1,17 @@
-import time
-import numpy
+from random import randint, uniform
 
-start_time = time.time()
-lst_int = []
-lst_flt = []
-lst_smbl = []
-a = 1
-b = 100
-c = 1.2
-d = 444.22
-e = 'f'
-f = 'r'
-for i in range(a, b + 1):
-    lst_int.append(i)
-for i in numpy.arange(c, d, 0.1):
-    lst_flt.append(i)
-for i in range(ord(e), ord(f) + 1):
-    lst_smbl.append(chr(i))
-shift_int = int(str(time.time() - start_time)[3:len(str(len(lst_int))) + 2])
-shift_flt = int(str(time.time() - start_time)[3:len(str(len(lst_flt))) + 2])
-shift_smbl = int(str(time.time() - start_time)[3:len(str(len(lst_smbl))) + 2])
-print(lst_int[shift_int])
-print(lst_flt[shift_flt])
-print(lst_smbl[shift_smbl])
-print(str(time.time() - start_time)[6:8])
-print(shift_int)
+print('Введите диапазон целых чисел: ')
+int_num_a = int(input('a: '))
+int_num_b = int(input('b: '))
+print('Введите диапазон вещественных чисел: ')
+float_num_a = float(input('a: '))
+float_num_b = float(input('b: '))
+print('Введите диапазон символов: ')
+symb1 = input('Первый символ: ')
+symb2 = input('Второй символ: ')
+rand_int = randint(min(int_num_a, int_num_b), max(int_num_a, int_num_b))
+rand_float = uniform(min(float_num_a, float_num_b), max(float_num_a, float_num_b))
+rand_symb = chr(randint(min(ord(symb1), ord(symb2)), max(ord(symb1), ord(symb2))))
+print(rand_int)
+print(rand_float)
+print(rand_symb)
