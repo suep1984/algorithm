@@ -1,0 +1,17 @@
+from random import randint, uniform
+
+print('Введите диапазон целых чисел: ')
+int_num_a = int(input('a: '))
+int_num_b = int(input('b: '))
+print('Введите диапазон вещественных чисел: ')
+float_num_a = float(input('a: '))
+float_num_b = float(input('b: '))
+print('Введите диапазон символов: ')
+symb1 = input('Первый символ: ')
+symb2 = input('Второй символ: ')
+rand_int = randint(min(int_num_a, int_num_b), max(int_num_a, int_num_b))
+rand_float = uniform(min(float_num_a, float_num_b), max(float_num_a, float_num_b))
+rand_symb = chr(randint(min(ord(symb1), ord(symb2)), max(ord(symb1), ord(symb2))))
+print(rand_int)
+print(rand_float)
+print(rand_symb)
