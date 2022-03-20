@@ -1,10 +1,8 @@
-def fibonacci(n):
+def get_progression(n):
     if n == 1:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    return get_progression(n - 1) + n
 
-m = 3
-print(fibonacci(m) == m * (m + 1) / 2)
-for i in range(m):
-    print(fibonacci(i))
 
+n = int(input('Введите "n": '))
+print(get_progression(n) == n * (n + 1) / 2)
